@@ -33,7 +33,7 @@ namespace Hospital_management_system
             }
             else
             {
-                MessageBox.Show("Wrong ID or password");
+                MessageBox.Show("Wrong Username or Password");
             }
         }
     }
