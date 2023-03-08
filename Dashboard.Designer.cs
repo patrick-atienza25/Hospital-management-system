@@ -42,9 +42,10 @@
             this.indicator3 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.newPatientPanel = new System.Windows.Forms.Panel();
+            this.btnSave = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtBloodType = new System.Windows.Forms.TextBox();
+            this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -53,13 +54,13 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtExperienced = new System.Windows.Forms.TextBox();
+            this.txtGender = new System.Windows.Forms.TextBox();
+            this.txtAge = new System.Windows.Forms.TextBox();
+            this.txtEmergency = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtPid = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -197,9 +198,10 @@
             // 
             // newPatientPanel
             // 
+            this.newPatientPanel.Controls.Add(this.btnSave);
             this.newPatientPanel.Controls.Add(this.label11);
-            this.newPatientPanel.Controls.Add(this.textBox5);
-            this.newPatientPanel.Controls.Add(this.textBox9);
+            this.newPatientPanel.Controls.Add(this.txtBloodType);
+            this.newPatientPanel.Controls.Add(this.txtPhoneNumber);
             this.newPatientPanel.Controls.Add(this.label10);
             this.newPatientPanel.Controls.Add(this.label9);
             this.newPatientPanel.Controls.Add(this.label8);
@@ -208,41 +210,53 @@
             this.newPatientPanel.Controls.Add(this.label5);
             this.newPatientPanel.Controls.Add(this.label4);
             this.newPatientPanel.Controls.Add(this.label3);
-            this.newPatientPanel.Controls.Add(this.textBox8);
-            this.newPatientPanel.Controls.Add(this.textBox7);
-            this.newPatientPanel.Controls.Add(this.textBox6);
-            this.newPatientPanel.Controls.Add(this.textBox4);
-            this.newPatientPanel.Controls.Add(this.textBox3);
-            this.newPatientPanel.Controls.Add(this.textBox2);
-            this.newPatientPanel.Controls.Add(this.textBox1);
+            this.newPatientPanel.Controls.Add(this.txtExperienced);
+            this.newPatientPanel.Controls.Add(this.txtGender);
+            this.newPatientPanel.Controls.Add(this.txtAge);
+            this.newPatientPanel.Controls.Add(this.txtEmergency);
+            this.newPatientPanel.Controls.Add(this.txtAddress);
+            this.newPatientPanel.Controls.Add(this.txtName);
+            this.newPatientPanel.Controls.Add(this.txtPid);
             this.newPatientPanel.Location = new System.Drawing.Point(282, 9);
             this.newPatientPanel.Name = "newPatientPanel";
             this.newPatientPanel.Size = new System.Drawing.Size(590, 440);
             this.newPatientPanel.TabIndex = 14;
+            this.newPatientPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.newPatientPanel_Paint);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(262, 396);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(78, 23);
+            this.btnSave.TabIndex = 19;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(56, 292);
+            this.label11.Location = new System.Drawing.Point(13, 291);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(88, 20);
             this.label11.TabIndex = 18;
             this.label11.Text = "Blood Type";
             // 
-            // textBox5
+            // txtBloodType
             // 
-            this.textBox5.Location = new System.Drawing.Point(211, 292);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(356, 20);
-            this.textBox5.TabIndex = 17;
+            this.txtBloodType.Location = new System.Drawing.Point(171, 293);
+            this.txtBloodType.Name = "txtBloodType";
+            this.txtBloodType.Size = new System.Drawing.Size(396, 20);
+            this.txtBloodType.TabIndex = 17;
             // 
-            // textBox9
+            // txtPhoneNumber
             // 
-            this.textBox9.Location = new System.Drawing.Point(211, 198);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(356, 20);
-            this.textBox9.TabIndex = 16;
+            this.txtPhoneNumber.Location = new System.Drawing.Point(171, 199);
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.Size = new System.Drawing.Size(396, 20);
+            this.txtPhoneNumber.TabIndex = 16;
+            this.txtPhoneNumber.TextChanged += new System.EventHandler(this.txtPhoneNumber_TextChanged);
             // 
             // label10
             // 
@@ -259,7 +273,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(56, 263);
+            this.label9.Location = new System.Drawing.Point(13, 262);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(63, 20);
             this.label9.TabIndex = 14;
@@ -269,7 +283,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(56, 232);
+            this.label8.Location = new System.Drawing.Point(13, 231);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(38, 20);
             this.label8.TabIndex = 13;
@@ -279,7 +293,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(56, 198);
+            this.label7.Location = new System.Drawing.Point(13, 197);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(115, 20);
             this.label7.TabIndex = 12;
@@ -290,7 +304,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(56, 169);
+            this.label6.Location = new System.Drawing.Point(13, 168);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(149, 20);
             this.label6.TabIndex = 11;
@@ -301,7 +315,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(56, 127);
+            this.label5.Location = new System.Drawing.Point(13, 126);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 20);
             this.label5.TabIndex = 10;
@@ -311,7 +325,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(56, 82);
+            this.label4.Location = new System.Drawing.Point(13, 40);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 20);
             this.label4.TabIndex = 9;
@@ -321,62 +335,64 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(56, 41);
+            this.label3.Location = new System.Drawing.Point(13, 81);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 20);
             this.label3.TabIndex = 8;
             this.label3.Text = "Name";
             // 
-            // textBox8
+            // txtExperienced
             // 
-            this.textBox8.Location = new System.Drawing.Point(15, 359);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(553, 20);
-            this.textBox8.TabIndex = 7;
-            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
+            this.txtExperienced.Location = new System.Drawing.Point(15, 359);
+            this.txtExperienced.Name = "txtExperienced";
+            this.txtExperienced.Size = new System.Drawing.Size(553, 20);
+            this.txtExperienced.TabIndex = 7;
+            this.txtExperienced.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
-            // textBox7
+            // txtGender
             // 
-            this.textBox7.Location = new System.Drawing.Point(211, 263);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(356, 20);
-            this.textBox7.TabIndex = 6;
+            this.txtGender.Location = new System.Drawing.Point(171, 264);
+            this.txtGender.Name = "txtGender";
+            this.txtGender.Size = new System.Drawing.Size(396, 20);
+            this.txtGender.TabIndex = 6;
             // 
-            // textBox6
+            // txtAge
             // 
-            this.textBox6.Location = new System.Drawing.Point(211, 232);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(356, 20);
-            this.textBox6.TabIndex = 5;
+            this.txtAge.Location = new System.Drawing.Point(171, 233);
+            this.txtAge.Name = "txtAge";
+            this.txtAge.Size = new System.Drawing.Size(396, 20);
+            this.txtAge.TabIndex = 5;
             // 
-            // textBox4
+            // txtEmergency
             // 
-            this.textBox4.Location = new System.Drawing.Point(211, 169);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(356, 20);
-            this.textBox4.TabIndex = 3;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.txtEmergency.Location = new System.Drawing.Point(171, 170);
+            this.txtEmergency.Name = "txtEmergency";
+            this.txtEmergency.Size = new System.Drawing.Size(396, 20);
+            this.txtEmergency.TabIndex = 3;
+            this.txtEmergency.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
-            // textBox3
+            // txtAddress
             // 
-            this.textBox3.Location = new System.Drawing.Point(211, 127);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(356, 20);
-            this.textBox3.TabIndex = 2;
+            this.txtAddress.Location = new System.Drawing.Point(171, 128);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(396, 20);
+            this.txtAddress.TabIndex = 2;
             // 
-            // textBox2
+            // txtName
             // 
-            this.textBox2.Location = new System.Drawing.Point(211, 82);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(356, 20);
-            this.textBox2.TabIndex = 1;
+            this.txtName.Location = new System.Drawing.Point(171, 83);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(396, 20);
+            this.txtName.TabIndex = 1;
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
-            // textBox1
+            // txtPid
             // 
-            this.textBox1.Location = new System.Drawing.Point(212, 41);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(356, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtPid.Location = new System.Drawing.Point(172, 42);
+            this.txtPid.Name = "txtPid";
+            this.txtPid.Size = new System.Drawing.Size(396, 20);
+            this.txtPid.TabIndex = 0;
+            this.txtPid.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Dashboard
             // 
@@ -432,15 +448,16 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtExperienced;
+        private System.Windows.Forms.TextBox txtGender;
+        private System.Windows.Forms.TextBox txtAge;
+        private System.Windows.Forms.TextBox txtEmergency;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtPid;
+        private System.Windows.Forms.TextBox txtPhoneNumber;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtBloodType;
+        private System.Windows.Forms.Button btnSave;
     }
 }
