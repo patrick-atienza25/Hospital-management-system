@@ -22,7 +22,7 @@ namespace Hospital_management_system
             String username = txtUsername.Text;
             String password = txtPassword.Text;
 
-            if(username == "pat" && password == "password")
+            if(username == "pat" && password == "asdf")
             {
                 //MessageBox.Show("You have entered correctly");
 
